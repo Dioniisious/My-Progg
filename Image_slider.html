@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>About possibilities of DOM model</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="prev()">Prev</button>
+        <img id="slider" src="https://vsegda-pomnim.com/uploads/posts/2022-04/1649137247_10-vsegda-pomnim-com-p-priroda-moskovskoi-oblasti-foto-10.jpg" width="1500px" height="900px">
+        <button onclick="next()">Next</button>
+    </div>
+</body>
+
+<script>
+    // Если сделать список фото с диска С - будет полная х##ня. Поэтому фотки брать ссылками из интернета!
+
+    var web_photos = [
+        "https://vsegda-pomnim.com/uploads/posts/2022-04/1649137247_10-vsegda-pomnim-com-p-priroda-moskovskoi-oblasti-foto-10.jpg",
+        "http://s1.fotokto.ru/photo/full/312/3121759.jpg",
+        "https://dogcatdog.ru/wp-content/uploads/d/a/f/daf69aad7920195ad1afef3d9b5e776d.jpe",
+        "https://vsegda-pomnim.com/uploads/posts/2022-04/1649137201_29-vsegda-pomnim-com-p-priroda-moskovskoi-oblasti-foto-29.jpg"
+    ];
+
+    var num = 0;
+
+    function next() {
+        var slie = document.getElementById("slider");
+        num++;
+        if (num >= web_photos.length) {
+            num = 0;
+        }
+        slie.src = web_photos[num];
+    }
+
+    function prev() {
+        var slie = document.getElementById("slider");
+        num--;
+        if (num < 0) {
+            num = web_photos.length - 1;
+        }
+        slie.src = web_photos[num];
+    }
+
+</script>
+
+</html>
