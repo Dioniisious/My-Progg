@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Edu+NSW+ACT+Foundation&family=Oswald&family=Pacifico&family=Roboto&display=swap');
+
+body {
+    font-family: "Edu NSW ACT Foundation", cursive;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hex {
+    text-align: center;
+}
+
+.hex_colors h1 {
+    font-size: 2rem;
+    animation: changecolor 5s infinite alternate;
+}
+
+.hex_colors h2 {
+    font-size: 2rem;
+    animation: changecolor 5s infinite alternate;
+    margin-top: 15%;
+}
+
+@keyframes changecolor {
+    0% {
+        color: red;
+    }
+    14.286% {
+        color: orange;
+    }
+    28.572% {
+        color: yellow;
+    }
+    42.858% {
+        color: green
+    }
+    57.144% {
+        color: turquoise
+    }
+    71.43% {
+        color: blue
+    }
+    85.716% {
+        color: purple
+    }
+    100% {
+        color: brown
+    }
+}
